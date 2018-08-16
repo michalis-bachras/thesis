@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="goal_metamodel.Goal_metamodelFactory"/>
+<fullyQualifiedTypeName name="goal_metamodel.ParallelLink"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
+<fullyQualifiedTypeName name="aDG_metamodel.ADG_metamodelFactory"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.BasicEList"/>
+<fullyQualifiedTypeName name="aDG_metamodel.Link"/>
+<fullyQualifiedTypeName name="goal_metamodel.TemporalPrecedence"/>
+<fullyQualifiedTypeName name="goal_metamodel.Resource"/>
+<fullyQualifiedTypeName name="goal_metamodel.ResourceDependency"/>
+<fullyQualifiedTypeName name="aDG_metamodel.ADG"/>
+<fullyQualifiedTypeName name="goal_metamodel.Contribution"/>
+<fullyQualifiedTypeName name="goal_metamodel.TimeoutLink"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="goal_metamodel.Decomposition"/>
+<fullyQualifiedTypeName name="goal_metamodel.DecompositionType"/>
+<fullyQualifiedTypeName name="goal_metamodel.ContributionType"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="aDG_metamodel.Node"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="goal_metamodel.Task"/>
+<fullyQualifiedTypeName name="goal_metamodel.Action"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="aDG_metamodel.SplitNode"/>
+<fullyQualifiedTypeName name="aDG_metamodel.JoinNode"/>
+<fullyQualifiedTypeName name="aDG_metamodel.ActionNode"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="goal_metamodel.GoalNode"/>
+<fullyQualifiedTypeName name="goal_metamodel.ContextCondition"/>
+<fullyQualifiedTypeName name="goal_metamodel.ParallelNode"/>
+<fullyQualifiedTypeName name="goal_metamodel.TimeDifferenceLink"/>
+<fullyQualifiedTypeName name="goal_metamodel.Goal_Model"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+</qualifiedTypeNameHistroy>

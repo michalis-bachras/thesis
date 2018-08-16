@@ -1,0 +1,122 @@
+package diplomatiki;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+
+import goal_metamodel.Action;
+import goal_metamodel.GoalNode;
+import goal_metamodel.Task;
+
+public class Context_change {
+	
+	private HashMap<String,Task> tasks = new HashMap<String,Task>();
+	private HashMap<String,Action> actions = new HashMap<String,Action>(); 
+	private List<String> goal_names = new ArrayList<String>();
+	
+	
+	
+	public Context_change(HashMap<String,Task> tasks,HashMap<String,Action> actions) {
+		this.tasks = tasks;
+		this.actions = actions;
+		goal_names.addAll(tasks.keySet());
+		goal_names.addAll(actions.keySet());
+		
+	}
+	
+	
+	public void change(Generator g,int number) {
+		
+		while(number>0) {
+			Random rand = new Random();
+			String goal = goal_names.get(rand.nextInt(goal_names.size()));
+			if(goal.equals("root")) {
+				continue;
+			}
+			else if(goal.contains("T")) {
+				Task t = tasks.get(goal);
+				if(t.get_OR_child_status() == true ) {
+					if(g.get_components__per_OR_id().containsKey(t.get_OR_id())) {
+						if(g.get_components__per_OR_id().get(t.get_OR_id()) < 2) {
+							throw new IllegalArgumentException("Context not available");
+						}
+						else {
+							t.set_availability_status(false);
+							int num = g.get_components__per_OR_id().get(t.get_OR_id());
+							num = num -1;
+							g.get_components__per_OR_id().put(t.get_OR_id(), num);
+							Find_and_change(t);
+							number = number -1;
+						}
+					}
+				}
+				else {
+					if(t.get_elimination() == false) {
+						throw new IllegalArgumentException("Context not available");
+					}
+					else {
+						t.set_availability_status(false);
+						Find_and_change(t);
+						number = number -1;
+						
+					}
+					
+				}
+				
+			}
+			else {
+				Action a = actions.get(goal);
+				if(a.get_OR_child_status() == true ) {
+					if(g.get_components__per_OR_id().containsKey(a.get_OR_id())) {
+						if(g.get_components__per_OR_id().get(a.get_OR_id()) < 2) {
+							throw new IllegalArgumentException("Context not available");
+						}
+						else {
+							a.set_availability_status(false);
+							int num = g.get_components__per_OR_id().get(a.get_OR_id());
+							num = num -1;
+							g.get_components__per_OR_id().put(a.get_OR_id(), num);
+							
+							number = number -1;
+						}
+					}
+				}
+				else {
+					if(a.get_elimination() == false) {
+						throw new IllegalArgumentException("Context not available");
+					}
+					else {
+						a.set_availability_status(false);
+						
+						number = number -1;
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+	public static void Find_and_change(Task t){
+		
+		for(int i=0;i<t.getHasdecomposition().getDecomposed_to().size();i++) {
+			GoalNode g = t.getHasdecomposition().getDecomposed_to().get(i);
+			if(g instanceof Task) {
+				g.set_availability_status(false);
+				Find_and_change((Task) g);
+			}
+			else {
+				g.set_availability_status(false);
+			}
+		}
+		
+		
+	}
+
+}

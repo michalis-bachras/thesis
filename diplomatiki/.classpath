@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ADG_metamodel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ADG_metamodel.edit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ADG_metamodel.editor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ADG_metamodel.tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IoT_metamodel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IoT_metamodel.edit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IoT_metamodel.editor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IoT_metamodel.tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.edit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.editor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.tests"/>
+	<classpathentry kind="lib" path="C:/Users/ADMIN/Desktop/org.eclipse.emf.common.jar"/>
+	<classpathentry kind="lib" path="C:/Users/debah/eclipse/java-photon/org.eclipse.emf.common.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

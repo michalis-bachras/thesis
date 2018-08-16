@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="aaaaaaaaaaa" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="aaaaaaaaaaa"/>
+			<item value="getORids"/>
+			<item value="to check"/>
+			<item value="Positive nodes to check"/>
+			<item value="are: 2"/>
+			<item value="are: 11"/>
+			<item value="are: 13"/>
+			<item value="are: 12"/>
+			<item value="are: 5"/>
+			<item value="are: 3"/>
+			<item value="3"/>
+			<item value="orid: 9"/>
+			<item value="are:  9"/>
+			<item value="are: 9"/>
+			<item value="invalid_orids"/>
+		</list>
+		<list key="replacehistory">
+			<item value="goalmodel"/>
+			<item value="Node"/>
+			<item value="generator"/>
+			<item value="g"/>
+			<item value="getTo()"/>
+			<item value="getFrom()"/>
+			<item value="tp"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="390" key="DIALOG_HEIGHT"/>
+		<item value="1582" key="DIALOG_X_ORIGIN"/>
+		<item value="658" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

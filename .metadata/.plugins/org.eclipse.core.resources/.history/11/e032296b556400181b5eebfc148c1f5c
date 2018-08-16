@@ -1,0 +1,44 @@
+/**
+ */
+package goal_metamodel.impl;
+
+import goal_metamodel.ContextCondition;
+import goal_metamodel.Goal_metamodelPackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Context Condition</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class ContextConditionImpl extends MinimalEObjectImpl.Container implements ContextCondition {
+	
+	protected String affected_node ;
+	
+	protected String description;
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContextConditionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return Goal_metamodelPackage.Literals.CONTEXT_CONDITION;
+	}
+
+} //ContextConditionImpl

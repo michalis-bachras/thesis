@@ -1,0 +1,437 @@
+package diplomatiki;
+
+import goal_metamodel.*;
+import java.util.ArrayList;
+import java.util.Collection;
+//import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+//import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import com.google.*;
+import com.google.common.collect.Lists;
+public class Find_Actions {
+	
+	public static <T> ArrayList<ArrayList<T>> powerSet(ArrayList<T> originalSet) {
+		ArrayList<ArrayList<T>> sets = new ArrayList<ArrayList<T>>();
+	    if (originalSet.isEmpty()) {
+	        sets.add(new ArrayList<T>());
+	        return sets;
+	    }
+	    List<T> list = new ArrayList<T>(originalSet);
+	    T head = list.get(0);
+	    ArrayList<T> rest = new  ArrayList<T>(list.subList(1, list.size())); 
+	    for (ArrayList<T> set : powerSet(rest)) {
+	    	ArrayList<T> newSet = new ArrayList<T>();
+	        newSet.add(head);
+	        newSet.addAll(set);
+	        sets.add(newSet);
+	        sets.add(set);
+	    }       
+	    return sets;
+	}
+	
+	private static void buildPowerSet(ArrayList<String> list, int count,ArrayList<ArrayList<String>> powerSet)
+	{
+	    powerSet.add(list);
+
+	    for(int i=0; i<list.size(); i++)
+	    {
+	        ArrayList<String> temp = new ArrayList<String>(list);
+	        temp.remove(i);
+	        buildPowerSet(temp, temp.size(),powerSet);
+	    }
+	}
+
+	protected ArrayList<ArrayList<Action>> outer = new ArrayList<ArrayList<Action>>();
+	//protected ArrayList<Action> inner = new ArrayList<Action>();
+	
+	public Find_Actions(List<Task> tasks){	
+	}
+	
+	
+	public static <T> ArrayList<T> Join(ArrayList<T> list1,  ArrayList<T> list2) {
+        ArrayList<T> result = new ArrayList<T>(list1);
+        result.addAll(list2);
+        return result;
+    }
+
+	static void GeneratePermutations(ArrayList<ArrayList<ArrayList<String>>> Lists, ArrayList<ArrayList<String>> result, int depth, ArrayList<String> current)
+	{
+	    if(depth == Lists.size())
+	    {
+	    	//ArrayList<Action> al = new ArrayList<>(current);
+	    	//Set<Action> hs = new HashSet<>();
+	    	//hs.addAll(al);
+	    	//al.clear();
+	    	//al.addAll(hs);
+	       result.add(current);
+	       return;
+	     }
+
+	    for(int i = 0; i < Lists.get(depth).size(); ++i)
+	    {
+	    	ArrayList<String> temp = new ArrayList<String>(current);
+	    	temp.addAll(Lists.get(depth).get(i));
+	        GeneratePermutations(Lists, result, depth + 1, temp );
+	    }
+	}
+	
+	//current.addAll(Lists.get(depth).get(i))
+	
+	
+	
+	
+	public static void Find(List<Task> tasks,ArrayList<Task> parallel_tasks,Goal_Model goalmodel){
+		
+		Goal_metamodelFactory factory=Goal_metamodelFactory.eINSTANCE;
+		int max_depth = tasks.get(0).getdepth();
+		int size = tasks.size();
+		int i=0;
+		HashMap<String,Action> global_parallel_actions = new HashMap<String,Action>();
+		while(i<size) {
+			
+			boolean break_flag = false;
+			Task t = tasks.get(i);
+			if(t.getdepth() == max_depth) {
+				if(t.getHasdecomposition().getType() == DecompositionType.AND) {
+					int number_of_components = t.getHasdecomposition().getDecomposed_to().size();
+					ArrayList<String> inner = new ArrayList<String>();
+					HashMap<String,Action> parallel_actions = new HashMap<String,Action>();
+					for (int j=0; j<number_of_components;j++) {
+						if(t.getHasdecomposition().getDecomposed_to().get(j).getParallelLinks().size()>0) {
+							
+							if(t.getHasdecomposition().getDecomposed_to().get(j).get_availability_status() == false) {
+								break_flag = true;
+								t.set_availability_status(false);
+								break;
+							}
+							String name = t.getHasdecomposition().getDecomposed_to().get(j).getParallelLinks().get(0).getTo().getName();  
+							Action P;
+							if(global_parallel_actions.containsKey(name)) {
+								P= global_parallel_actions.get(name);
+							}
+							else {
+								P = factory.createAction();
+								global_parallel_actions.put(name, P);
+							}
+							
+							
+							P.setName(name);
+							P.setIsParallelAction();
+							
+							parallel_actions.put(name, P);
+							goalmodel.getActions().put(name, P);
+							
+						}
+						else {
+							if(t.getHasdecomposition().getDecomposed_to().get(j).get_availability_status() == false) {
+								break_flag = true;
+								t.set_availability_status(false);
+								break;
+							}
+							inner.add(t.getHasdecomposition().getDecomposed_to().get(j).getName());
+						}
+						
+					}
+					if(break_flag == true) {
+						i++;
+						continue;
+					}
+					//ArrayList<Action> values = (ArrayList<Action>) ;
+					ArrayList<String> parallel_actions2 = new ArrayList<String>(parallel_actions.keySet());
+					//parallel_actions2 =  values;
+					inner.addAll(parallel_actions2);
+					
+					t.setOuterList(inner);
+				}
+				
+				else {
+					ArrayList<String> combinations = new ArrayList<String>();
+					int number_of_components = t.getHasdecomposition().getDecomposed_to().size();
+					HashMap<String,Action> parallel_actions = new HashMap<String,Action>();
+					for (int j=0; j<number_of_components;j++) {
+						if(t.getHasdecomposition().getDecomposed_to().get(j).getParallelLinks().size()>0) {
+							if(t.getHasdecomposition().getDecomposed_to().get(j).get_availability_status() == false) {
+								continue;
+							}
+							String name = t.getHasdecomposition().getDecomposed_to().get(j).getParallelLinks().get(0).getTo().getName();
+							Action P;
+							if(global_parallel_actions.containsKey(name)) {
+								P= global_parallel_actions.get(name);
+							}
+							else {
+								P = factory.createAction();
+								global_parallel_actions.put(name, P);
+							}
+							
+							P.setName(name);
+							P.setIsParallelAction();
+							P.set_OR_dec_id(t.getHasdecomposition().get_OR_dec_id());
+							parallel_actions.put(name, P);
+							goalmodel.getActions().put(name, P);
+						}
+						else {
+							if(t.getHasdecomposition().getDecomposed_to().get(j).get_availability_status() == false) {
+								continue;
+							}
+							
+							combinations.add(t.getHasdecomposition().getDecomposed_to().get(j).getName());
+							
+						}
+						
+						
+					}
+					for(String value : parallel_actions.keySet()) {
+						
+						combinations.add(value);
+						
+					}
+					ArrayList<ArrayList<String>> powerSet = new ArrayList<ArrayList<String>>();
+					buildPowerSet(combinations,combinations.size(),powerSet);
+					
+					for (ArrayList<String> s : powerSet) {
+						if(s.size()>0) {
+							t.setOuterList(s);
+						}
+						
+					}
+					
+				//	for (ArrayList<String> s : powerSet(combinations)) {
+						//if(s.size()>0) {
+						//	t.setOuterList(s);
+						//}
+						
+					//}
+					
+				}
+			}
+			
+			else {
+				if(t.getHasdecomposition().getType() == DecompositionType.AND) {
+					int number_of_components = t.getHasdecomposition().getDecomposed_to().size();
+					ArrayList<ArrayList<ArrayList<String>>> allActions = new ArrayList<ArrayList<ArrayList<String>>>();
+					HashMap<String,Action> parallel_actions = new HashMap<String,Action>();
+					for(int k=0;k<number_of_components;k++) {
+						if(t.getHasdecomposition().getDecomposed_to().get(k).get_availability_status() == false) {
+							break_flag = true;
+							t.set_availability_status(false);
+							break;
+						}
+						if(t.getHasdecomposition().getDecomposed_to().get(k) instanceof Task) {
+							Task t1 = (Task)t.getHasdecomposition().getDecomposed_to().get(k);
+							if(t1.getParallelLinks().size()>0) {
+								//parallel_tasks.add(t1);
+								String name = t1.getParallelLinks().get(0).getTo().getName();
+								Action P;
+								if(global_parallel_actions.containsKey(name)) {
+									P= global_parallel_actions.get(name);
+								}
+								else {
+									P = factory.createAction();
+									global_parallel_actions.put(name, P);
+								}
+								
+								P.setName(name);
+								P.setIsParallelAction();
+								parallel_actions.put(name, P);
+								goalmodel.getActions().put(name, P);
+							}
+							else {
+								allActions.add(t1.getOuterList());
+							}
+							
+						}
+						else {
+							Action a = (Action)t.getHasdecomposition().getDecomposed_to().get(k);
+							if(a.getParallelLinks().size()>0) {
+								String name = a.getParallelLinks().get(0).getTo().getName();
+								Action P;
+								if(global_parallel_actions.containsKey(name)) {
+									P= global_parallel_actions.get(name);
+								}
+								else {
+									P = factory.createAction();
+									global_parallel_actions.put(name, P);
+								}
+								
+								P.setName(name);
+								P.setIsParallelAction();
+								parallel_actions.put(name, P);
+								goalmodel.getActions().put(name, P);
+							}
+							else {
+								ArrayList<ArrayList<String>> temp = new ArrayList<ArrayList<String>>();
+								ArrayList<String> temp1 = new ArrayList<String>();
+								temp1.add(a.getName());
+								temp.add(temp1);
+								allActions.add(temp);
+							}
+							
+						}
+						
+					}
+					if(break_flag == true) {
+						i++;
+						continue;
+					}
+					
+					for(String value : parallel_actions.keySet()) {
+						ArrayList<String> temp = new ArrayList<String>();
+						temp.add(value);
+						ArrayList<ArrayList<String>> temp1 = new ArrayList<ArrayList<String>>();
+						temp1.add(temp);
+						allActions.add(temp1);
+					}
+					
+					
+					ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+					ArrayList<String> current = new ArrayList<String>();
+					GeneratePermutations(allActions,result,0,current);
+					t.equateOuterList(result);
+				}
+				
+				else {
+					int number_of_components = t.getHasdecomposition().getDecomposed_to().size();
+					ArrayList<String> combinations = new ArrayList<String>();
+					ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+					HashMap<String,Action> parallel_actions = new HashMap<String,Action>();
+					for(int k=0;k<number_of_components;k++) {
+						if(t.getHasdecomposition().getDecomposed_to().get(k).get_availability_status() == false) {
+							continue;
+						}
+						if(t.getHasdecomposition().getDecomposed_to().get(k) instanceof Task) {
+							Task t1 = (Task)t.getHasdecomposition().getDecomposed_to().get(k);
+							if(t1.getParallelLinks().size()>0) {
+								//parallel_tasks.add(t1);
+								String name = t1.getParallelLinks().get(0).getTo().getName();
+								Action P;
+								if(global_parallel_actions.containsKey(name)) {
+									P= global_parallel_actions.get(name);
+								}
+								else {
+									P = factory.createAction();
+									global_parallel_actions.put(name, P);
+								}
+								
+								P.setName(name);
+								P.setIsParallelAction();
+								P.set_OR_dec_id(t.getHasdecomposition().get_OR_dec_id());
+								parallel_actions.put(name, P);
+								goalmodel.getActions().put(name, P);
+							}
+							else {
+								combinations.add(t1.getName());
+							}
+							
+						}
+						else {
+							Action a = (Action)t.getHasdecomposition().getDecomposed_to().get(k);
+							if(a.getParallelLinks().size()>0) {
+								String name = a.getParallelLinks().get(0).getTo().getName();
+								Action P;
+								if(global_parallel_actions.containsKey(name)) {
+									P= global_parallel_actions.get(name);
+								}
+								else {
+									P = factory.createAction();
+									global_parallel_actions.put(name, P);
+								}
+								
+								P.setName(name);
+								P.setIsParallelAction();
+								P.set_OR_dec_id(t.getHasdecomposition().get_OR_dec_id());
+								parallel_actions.put(name, P);
+								goalmodel.getActions().put(name, P);
+							}
+							else {
+								
+								combinations.add(a.getName());
+							}
+							
+						}
+						
+					}
+						
+						for(String value : parallel_actions.keySet()) {
+							//ArrayList<Action> parallel_action = new ArrayList<Action>();
+							combinations.add(value);
+							//t.setOuterList(parallel_action);
+						}
+						//System.out.println(t.getName());
+						ArrayList<ArrayList<String>> powerSet = new ArrayList<ArrayList<String>>();
+						buildPowerSet(combinations,combinations.size(),powerSet);
+						
+						//for (ArrayList<String> s : powerSet) {
+						//	if(s.size()>0) {
+							//	t.setOuterList(s);
+						//	}
+							
+						//}
+						//ArrayList<ArrayList<String>> final_result = new ArrayList<ArrayList<String>>();
+						for (ArrayList<String> s : powerSet) {
+							if(s.size() == 0) {
+								continue;
+							}
+							//if(t.getName().equals("root")) {
+							//	System.out.println(s);
+							//}
+							ArrayList<ArrayList<ArrayList<String>>> allActions = new ArrayList<ArrayList<ArrayList<String>>>();
+							for(String g : s) {
+								if(g.contains("T")) {
+									allActions.add(goalmodel.getTasks().get(g).getOuterList());
+								}
+								else {
+									ArrayList<ArrayList<String>> temp = new ArrayList<ArrayList<String>>();
+									ArrayList<String> temp1 = new ArrayList<String>();
+									temp1.add( g);
+									temp.add(temp1);
+									allActions.add(temp);
+								}
+							}
+							
+							ArrayList<ArrayList<String>> result1 = new ArrayList<ArrayList<String>>();
+							ArrayList<String> current = new ArrayList<String>();
+							//List<List<String>> cartesianProduct = Lists.cartesianProduct(allActions);
+							GeneratePermutations(allActions,result1,0,current);
+							//System.out.println(result1);
+							//final_result = Join(final_result,result1);
+							t.getOuterList().addAll(result1);
+						}
+						
+						//t.equateOuterList(final_result);
+						
+						
+						
+						
+						
+						
+						/*if(t.getHasdecomposition().getDecomposed_to().get(k) instanceof Task) {
+							Task t1 = (Task)t.getHasdecomposition().getDecomposed_to().get(k);
+							result = Join(result,t1.getOuterList());
+						}
+						else {
+							Action a = (Action)t.getHasdecomposition().getDecomposed_to().get(k);
+							ArrayList<Action> temp1 = new ArrayList<Action>();
+							temp1.add(a);
+							result.add(temp1);
+							
+						}
+						
+						
+					*/
+						
+					//t.equateOuterList(result);
+					
+				}
+				
+			}
+			
+			i++;
+			
+		}
+		//return parallel_tasks;
+		
+	}
+}
