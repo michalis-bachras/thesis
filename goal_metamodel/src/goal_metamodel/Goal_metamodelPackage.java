@@ -68,42 +68,6 @@ public interface Goal_metamodelPackage extends EPackage {
 	int NODE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__DESCRIPTION = 1;
-
-	/**
-	 * The number of structural features of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link goal_metamodel.impl.ContextualComponentImpl <em>Contextual Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +112,60 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTEXTUAL_COMPONENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__HAS_CONTEXTCONDITION = CONTEXTUAL_COMPONENT__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__CONTEXT_ENABLED = CONTEXTUAL_COMPONENT__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DESCRIPTION = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = CONTEXTUAL_COMPONENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link goal_metamodel.impl.DecompositionImpl <em>Decomposition</em>}' class.
@@ -242,13 +260,22 @@ public interface Goal_metamodelPackage extends EPackage {
 	int LINK__CONTEXT_ENABLED = CONTEXTUAL_COMPONENT__CONTEXT_ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__AVAILABLE = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 0;
+	int LINK_FEATURE_COUNT = CONTEXTUAL_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -286,6 +313,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPENDENCY_LINK__CONTEXT_ENABLED = LINK__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDENCY_LINK__AVAILABLE = LINK__AVAILABLE;
 
 	/**
 	 * The number of structural features of the '<em>Dependency Link</em>' class.
@@ -332,6 +368,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGICAL_PRECEDENCE__CONTEXT_ENABLED = DEPENDENCY_LINK__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_PRECEDENCE__AVAILABLE = DEPENDENCY_LINK__AVAILABLE;
 
 	/**
 	 * The feature id for the '<em><b>From goalnode</b></em>' reference.
@@ -398,6 +443,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	int TEMPORAL_LINK__CONTEXT_ENABLED = DEPENDENCY_LINK__CONTEXT_ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPORAL_LINK__AVAILABLE = DEPENDENCY_LINK__AVAILABLE;
+
+	/**
 	 * The number of structural features of the '<em>Temporal Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,6 +496,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPORAL_PRECEDENCE__CONTEXT_ENABLED = TEMPORAL_LINK__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPORAL_PRECEDENCE__AVAILABLE = TEMPORAL_LINK__AVAILABLE;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -506,6 +569,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIMEOUT_LINK__CONTEXT_ENABLED = TEMPORAL_PRECEDENCE__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIMEOUT_LINK__AVAILABLE = TEMPORAL_PRECEDENCE__AVAILABLE;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -599,6 +671,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	int TIME_DIFFERENCE_LINK__CONTEXT_ENABLED = TEMPORAL_PRECEDENCE__CONTEXT_ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DIFFERENCE_LINK__AVAILABLE = TEMPORAL_PRECEDENCE__AVAILABLE;
+
+	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -688,6 +769,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTRIBUTION__CONTEXT_ENABLED = LINK__CONTEXT_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRIBUTION__AVAILABLE = LINK__AVAILABLE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -864,6 +954,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	int RESOURCE_DEPENDENCY__CONTEXT_ENABLED = DEPENDENCY_LINK__CONTEXT_ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_DEPENDENCY__AVAILABLE = DEPENDENCY_LINK__AVAILABLE;
+
+	/**
 	 * The feature id for the '<em><b>To resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -908,6 +1007,24 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int RESOURCE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__HAS_CONTEXTCONDITION = NODE__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__CONTEXT_ENABLED = NODE__CONTEXT_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -965,6 +1082,24 @@ public interface Goal_metamodelPackage extends EPackage {
 	int CONTROL_NODE = 18;
 
 	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_NODE__HAS_CONTEXTCONDITION = NODE__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_NODE__CONTEXT_ENABLED = NODE__CONTEXT_ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,6 +1144,24 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int PARALLEL_NODE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARALLEL_NODE__HAS_CONTEXTCONDITION = CONTROL_NODE__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARALLEL_NODE__CONTEXT_ENABLED = CONTROL_NODE__CONTEXT_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1093,6 +1246,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	int PARALLEL_LINK__CONTEXT_ENABLED = DEPENDENCY_LINK__CONTEXT_ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARALLEL_LINK__AVAILABLE = DEPENDENCY_LINK__AVAILABLE;
+
+	/**
 	 * The feature id for the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1139,6 +1301,24 @@ public interface Goal_metamodelPackage extends EPackage {
 	int GOAL_NODE = 17;
 
 	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_NODE__HAS_CONTEXTCONDITION = NODE__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_NODE__CONTEXT_ENABLED = NODE__CONTEXT_ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,13 +1337,22 @@ public interface Goal_metamodelPackage extends EPackage {
 	int GOAL_NODE__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_NODE__AVAILABLE = NODE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Goal Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOAL_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int GOAL_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Goal Node</em>' class.
@@ -1175,78 +1364,14 @@ public interface Goal_metamodelPackage extends EPackage {
 	int GOAL_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link goal_metamodel.impl.SyncNodeImpl <em>Sync Node</em>}' class.
+	 * The meta object id for the '{@link goal_metamodel.impl.ActionImpl <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see goal_metamodel.impl.SyncNodeImpl
-	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getSyncNode()
+	 * @see goal_metamodel.impl.ActionImpl
+	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getAction()
 	 * @generated
 	 */
-	int SYNC_NODE = 19;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE__NAME = CONTROL_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE__DESCRIPTION = CONTROL_NODE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Nodes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE__NUMBER_OF_NODES = CONTROL_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Timeout</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE__TIMEOUT = CONTROL_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Sync Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Sync Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link goal_metamodel.impl.SyncLinkImpl <em>Sync Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see goal_metamodel.impl.SyncLinkImpl
-	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getSyncLink()
-	 * @generated
-	 */
-	int SYNC_LINK = 20;
+	int ACTION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
@@ -1255,7 +1380,7 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYNC_LINK__HAS_CONTEXTCONDITION = DEPENDENCY_LINK__HAS_CONTEXTCONDITION;
+	int ACTION__HAS_CONTEXTCONDITION = GOAL_NODE__HAS_CONTEXTCONDITION;
 
 	/**
 	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
@@ -1264,53 +1389,7 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYNC_LINK__CONTEXT_ENABLED = DEPENDENCY_LINK__CONTEXT_ENABLED;
-
-	/**
-	 * The feature id for the '<em><b>To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_LINK__TO = DEPENDENCY_LINK_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>From</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_LINK__FROM = DEPENDENCY_LINK_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Sync Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_LINK_FEATURE_COUNT = DEPENDENCY_LINK_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Sync Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNC_LINK_OPERATION_COUNT = DEPENDENCY_LINK_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link goal_metamodel.impl.ActionImpl <em>Action</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see goal_metamodel.impl.ActionImpl
-	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getAction()
-	 * @generated
-	 */
-	int ACTION = 21;
+	int ACTION__CONTEXT_ENABLED = GOAL_NODE__CONTEXT_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1331,6 +1410,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	int ACTION__DESCRIPTION = GOAL_NODE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__AVAILABLE = GOAL_NODE__AVAILABLE;
+
+	/**
 	 * The feature id for the '<em><b>Requires</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1340,22 +1428,40 @@ public interface Goal_metamodelPackage extends EPackage {
 	int ACTION__REQUIRES = GOAL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Thread</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__THREAD = GOAL_NODE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Resource enabled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__RESOURCE_ENABLED = GOAL_NODE_FEATURE_COUNT + 2;
+	int ACTION__RESOURCE_ENABLED = GOAL_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__START_TIME = GOAL_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__END_TIME = GOAL_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__ID = GOAL_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -1364,7 +1470,7 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = GOAL_NODE_FEATURE_COUNT + 3;
+	int ACTION_FEATURE_COUNT = GOAL_NODE_FEATURE_COUNT + 5;
 	
 	int PARALLELLINK__LIST = GOAL_NODE_FEATURE_COUNT + 4;
 
@@ -1385,7 +1491,25 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getTask()
 	 * @generated
 	 */
-	int TASK = 22;
+	int TASK = 20;
+
+	/**
+	 * The feature id for the '<em><b>Has contextcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__HAS_CONTEXTCONDITION = GOAL_NODE__HAS_CONTEXTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Context enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__CONTEXT_ENABLED = GOAL_NODE__CONTEXT_ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1404,6 +1528,15 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK__DESCRIPTION = GOAL_NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__AVAILABLE = GOAL_NODE__AVAILABLE;
 
 	/**
 	 * The feature id for the '<em><b>Hasdecomposition</b></em>' containment reference.
@@ -1440,7 +1573,7 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getDecompositionType()
 	 * @generated
 	 */
-	int DECOMPOSITION_TYPE = 23;
+	int DECOMPOSITION_TYPE = 21;
 
 	/**
 	 * The meta object id for the '{@link goal_metamodel.ContributionType <em>Contribution Type</em>}' enum.
@@ -1450,7 +1583,7 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getContributionType()
 	 * @generated
 	 */
-	int CONTRIBUTION_TYPE = 24;
+	int CONTRIBUTION_TYPE = 22;
 
 	
 
@@ -1698,6 +1831,17 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link goal_metamodel.Link#isAvailable <em>Available</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Available</em>'.
+	 * @see goal_metamodel.Link#isAvailable()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EAttribute getLink_Available();
 
 	/**
 	 * Returns the meta object for class '{@link goal_metamodel.Contribution <em>Contribution</em>}'.
@@ -1977,6 +2121,17 @@ public interface Goal_metamodelPackage extends EPackage {
 	EClass getGoalNode();
 
 	/**
+	 * Returns the meta object for the attribute '{@link goal_metamodel.GoalNode#isAvailable <em>Available</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Available</em>'.
+	 * @see goal_metamodel.GoalNode#isAvailable()
+	 * @see #getGoalNode()
+	 * @generated
+	 */
+	EAttribute getGoalNode_Available();
+
+	/**
 	 * Returns the meta object for class '{@link goal_metamodel.ControlNode <em>Control Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1985,70 +2140,6 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getControlNode();
-
-	/**
-	 * Returns the meta object for class '{@link goal_metamodel.SyncNode <em>Sync Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sync Node</em>'.
-	 * @see goal_metamodel.SyncNode
-	 * @generated
-	 */
-	EClass getSyncNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link goal_metamodel.SyncNode#getNumberOfNodes <em>Number Of Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Nodes</em>'.
-	 * @see goal_metamodel.SyncNode#getNumberOfNodes()
-	 * @see #getSyncNode()
-	 * @generated
-	 */
-	EAttribute getSyncNode_NumberOfNodes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link goal_metamodel.SyncNode#getTimeout <em>Timeout</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timeout</em>'.
-	 * @see goal_metamodel.SyncNode#getTimeout()
-	 * @see #getSyncNode()
-	 * @generated
-	 */
-	EAttribute getSyncNode_Timeout();
-
-	/**
-	 * Returns the meta object for class '{@link goal_metamodel.SyncLink <em>Sync Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sync Link</em>'.
-	 * @see goal_metamodel.SyncLink
-	 * @generated
-	 */
-	EClass getSyncLink();
-
-	/**
-	 * Returns the meta object for the reference '{@link goal_metamodel.SyncLink#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To</em>'.
-	 * @see goal_metamodel.SyncLink#getTo()
-	 * @see #getSyncLink()
-	 * @generated
-	 */
-	EReference getSyncLink_To();
-
-	/**
-	 * Returns the meta object for the reference '{@link goal_metamodel.SyncLink#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>From</em>'.
-	 * @see goal_metamodel.SyncLink#getFrom()
-	 * @see #getSyncLink()
-	 * @generated
-	 */
-	EReference getSyncLink_From();
 
 	/**
 	 * Returns the meta object for class '{@link goal_metamodel.Action <em>Action</em>}'.
@@ -2072,17 +2163,6 @@ public interface Goal_metamodelPackage extends EPackage {
 	EReference getAction_Requires();
 
 	/**
-	 * Returns the meta object for the attribute '{@link goal_metamodel.Action#getThread <em>Thread</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Thread</em>'.
-	 * @see goal_metamodel.Action#getThread()
-	 * @see #getAction()
-	 * @generated
-	 */
-	EAttribute getAction_Thread();
-
-	/**
 	 * Returns the meta object for the attribute '{@link goal_metamodel.Action#isResource_enabled <em>Resource enabled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2092,6 +2172,39 @@ public interface Goal_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAction_Resource_enabled();
+
+	/**
+	 * Returns the meta object for the attribute '{@link goal_metamodel.Action#getStartTime <em>Start Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see goal_metamodel.Action#getStartTime()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_StartTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link goal_metamodel.Action#getEndTime <em>End Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see goal_metamodel.Action#getEndTime()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_EndTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link goal_metamodel.Action#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see goal_metamodel.Action#getId()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Id();
 
 	/**
 	 * Returns the meta object for class '{@link goal_metamodel.Task <em>Task</em>}'.
@@ -2360,6 +2473,14 @@ public interface Goal_metamodelPackage extends EPackage {
 		EClass LINK = eINSTANCE.getLink();
 
 		/**
+		 * The meta object literal for the '<em><b>Available</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK__AVAILABLE = eINSTANCE.getLink_Available();
+
+		/**
 		 * The meta object literal for the '{@link goal_metamodel.impl.ContributionImpl <em>Contribution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2586,6 +2707,14 @@ public interface Goal_metamodelPackage extends EPackage {
 		EClass GOAL_NODE = eINSTANCE.getGoalNode();
 
 		/**
+		 * The meta object literal for the '<em><b>Available</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOAL_NODE__AVAILABLE = eINSTANCE.getGoalNode_Available();
+
+		/**
 		 * The meta object literal for the '{@link goal_metamodel.impl.ControlNodeImpl <em>Control Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2594,58 +2723,6 @@ public interface Goal_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTROL_NODE = eINSTANCE.getControlNode();
-
-		/**
-		 * The meta object literal for the '{@link goal_metamodel.impl.SyncNodeImpl <em>Sync Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see goal_metamodel.impl.SyncNodeImpl
-		 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getSyncNode()
-		 * @generated
-		 */
-		EClass SYNC_NODE = eINSTANCE.getSyncNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Nodes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SYNC_NODE__NUMBER_OF_NODES = eINSTANCE.getSyncNode_NumberOfNodes();
-
-		/**
-		 * The meta object literal for the '<em><b>Timeout</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SYNC_NODE__TIMEOUT = eINSTANCE.getSyncNode_Timeout();
-
-		/**
-		 * The meta object literal for the '{@link goal_metamodel.impl.SyncLinkImpl <em>Sync Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see goal_metamodel.impl.SyncLinkImpl
-		 * @see goal_metamodel.impl.Goal_metamodelPackageImpl#getSyncLink()
-		 * @generated
-		 */
-		EClass SYNC_LINK = eINSTANCE.getSyncLink();
-
-		/**
-		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYNC_LINK__TO = eINSTANCE.getSyncLink_To();
-
-		/**
-		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYNC_LINK__FROM = eINSTANCE.getSyncLink_From();
 
 		/**
 		 * The meta object literal for the '{@link goal_metamodel.impl.ActionImpl <em>Action</em>}' class.
@@ -2666,20 +2743,36 @@ public interface Goal_metamodelPackage extends EPackage {
 		EReference ACTION__REQUIRES = eINSTANCE.getAction_Requires();
 
 		/**
-		 * The meta object literal for the '<em><b>Thread</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTION__THREAD = eINSTANCE.getAction_Thread();
-
-		/**
 		 * The meta object literal for the '<em><b>Resource enabled</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ACTION__RESOURCE_ENABLED = eINSTANCE.getAction_Resource_enabled();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__START_TIME = eINSTANCE.getAction_StartTime();
+
+		/**
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__END_TIME = eINSTANCE.getAction_EndTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__ID = eINSTANCE.getAction_Id();
 
 		/**
 		 * The meta object literal for the '{@link goal_metamodel.impl.TaskImpl <em>Task</em>}' class.

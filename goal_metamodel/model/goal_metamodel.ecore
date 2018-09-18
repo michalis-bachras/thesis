@@ -23,25 +23,25 @@
         upperBound="-1" eType="#//GoalNode" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DependencyLink" eSuperTypes="#//Link"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LogicalPrecondition" eSuperTypes="#//DependencyLink">
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalPrecedence" eSuperTypes="#//DependencyLink">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from_goalnode" lowerBound="1"
         eType="#//GoalNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to_goalnode" lowerBound="1"
         eType="#//GoalNode"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TemporalLink" eSuperTypes="#//DependencyLink"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TemporalPrecondition" eSuperTypes="#//TemporalLink">
+  <eClassifiers xsi:type="ecore:EClass" name="TemporalPrecedence" eSuperTypes="#//TemporalLink">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//GoalNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//GoalNode"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeoutLink" eSuperTypes="#//TemporalPrecondition">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeoutLink" eSuperTypes="#//TemporalPrecedence">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TimeoutPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="from_action" lowerBound="1"
         eType="#//Action"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to_action" lowerBound="1"
         eType="#//Action"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeDifferenceLink" eSuperTypes="#//TemporalPrecondition">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDifferenceLink" eSuperTypes="#//TemporalPrecedence">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="TimeDifference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="from_action" lowerBound="1"
         eType="#//Action"/>

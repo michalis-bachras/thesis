@@ -5,22 +5,38 @@ package goal_metamodel.impl;
 import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.ParallelLink;
-import goal_metamodel.Resource;
-
 import java.util.HashSet;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Goal Node</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link goal_metamodel.impl.GoalNodeImpl#isAvailable <em>Available</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class GoalNodeImpl extends NodeImpl implements GoalNode {
+	/**
+	 * The default value of the '{@link #isAvailable() <em>Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAvailable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AVAILABLE_EDEFAULT = true;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +229,101 @@ public class GoalNodeImpl extends NodeImpl implements GoalNode {
 	@Override
 	protected EClass eStaticClass() {
 		return Goal_metamodelPackage.Literals.GOAL_NODE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAvailable() {
+		return available;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAvailable(boolean newAvailable) {
+		boolean oldAvailable = available;
+		available = newAvailable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.GOAL_NODE__AVAILABLE, oldAvailable, available));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case Goal_metamodelPackage.GOAL_NODE__AVAILABLE:
+				return isAvailable();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case Goal_metamodelPackage.GOAL_NODE__AVAILABLE:
+				setAvailable((Boolean)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case Goal_metamodelPackage.GOAL_NODE__AVAILABLE:
+				setAvailable(AVAILABLE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Goal_metamodelPackage.GOAL_NODE__AVAILABLE:
+				return available != AVAILABLE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (available: ");
+		result.append(available);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GoalNodeImpl

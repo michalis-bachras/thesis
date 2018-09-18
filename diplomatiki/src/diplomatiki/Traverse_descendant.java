@@ -1,10 +1,10 @@
 package diplomatiki;
 
-import java.util.Collections;
+//import java.util.Collections;
 import java.util.List;
 
 import goal_metamodel.Action;
-import goal_metamodel.GoalNode;
+//import goal_metamodel.GoalNode;
 import goal_metamodel.Task;
 
 public class Traverse_descendant {

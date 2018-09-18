@@ -11,6 +11,12 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Goal Node</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link goal_metamodel.GoalNode#isAvailable <em>Available</em>}</li>
+ * </ul>
  *
  * @see goal_metamodel.Goal_metamodelPackage#getGoalNode()
  * @model
@@ -18,6 +24,33 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface GoalNode extends Node {
 	
+	/**
+	 * Returns the value of the '<em><b>Available</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Available</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Available</em>' attribute.
+	 * @see #setAvailable(boolean)
+	 * @see goal_metamodel.Goal_metamodelPackage#getGoalNode_Available()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isAvailable();
+
+	/**
+	 * Sets the value of the '{@link goal_metamodel.GoalNode#isAvailable <em>Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Available</em>' attribute.
+	 * @see #isAvailable()
+	 * @generated
+	 */
+	void setAvailable(boolean value);
+
 	public void addOR_dec_idlist(HashSet<String> OR_dec_ids1);
 	
 	public void addOR_dec_id(String OR_dec_id);

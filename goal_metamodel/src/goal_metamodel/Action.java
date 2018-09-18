@@ -2,7 +2,7 @@
  */
 package goal_metamodel;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,8 +20,10 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link goal_metamodel.Action#getRequires <em>Requires</em>}</li>
- *   <li>{@link goal_metamodel.Action#getThread <em>Thread</em>}</li>
  *   <li>{@link goal_metamodel.Action#isResource_enabled <em>Resource enabled</em>}</li>
+ *   <li>{@link goal_metamodel.Action#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link goal_metamodel.Action#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link goal_metamodel.Action#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see goal_metamodel.Goal_metamodelPackage#getAction()
@@ -55,32 +57,6 @@ public interface Action extends GoalNode {
 	EList<Resource> getRequires();
 
 	/**
-	 * Returns the value of the '<em><b>Thread</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Thread</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Thread</em>' attribute.
-	 * @see #setThread(int)
-	 * @see goal_metamodel.Goal_metamodelPackage#getAction_Thread()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
-	 * @generated
-	 */
-	String getThread();
-
-	/**
-	 * Sets the value of the '{@link goal_metamodel.Action#getThread <em>Thread</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Thread</em>' attribute.
-	 * @see #getThread()
-	 * @generated
-	 */
-	void setThread(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Resource enabled</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
@@ -107,6 +83,84 @@ public interface Action extends GoalNode {
 	 */
 	void setResource_enabled(boolean value);
 	
+	/**
+	 * Returns the value of the '<em><b>Start Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Start Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Start Time</em>' attribute.
+	 * @see #setStartTime(Date)
+	 * @see goal_metamodel.Goal_metamodelPackage#getAction_StartTime()
+	 * @model
+	 * @generated
+	 */
+	Date getStartTime();
+
+	/**
+	 * Sets the value of the '{@link goal_metamodel.Action#getStartTime <em>Start Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start Time</em>' attribute.
+	 * @see #getStartTime()
+	 * @generated
+	 */
+	void setStartTime(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>End Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>End Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>End Time</em>' attribute.
+	 * @see #setEndTime(Date)
+	 * @see goal_metamodel.Goal_metamodelPackage#getAction_EndTime()
+	 * @model
+	 * @generated
+	 */
+	Date getEndTime();
+
+	/**
+	 * Sets the value of the '{@link goal_metamodel.Action#getEndTime <em>End Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>End Time</em>' attribute.
+	 * @see #getEndTime()
+	 * @generated
+	 */
+	void setEndTime(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see goal_metamodel.Goal_metamodelPackage#getAction_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link goal_metamodel.Action#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
 	public void setIsParallelAction();
 	
 	public boolean getIsParallelAction();

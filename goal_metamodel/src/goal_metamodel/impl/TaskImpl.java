@@ -1,8 +1,6 @@
 /**
  */
 package goal_metamodel.impl;
-import goal_metamodel.*;
-
 import goal_metamodel.Decomposition;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Task;
@@ -151,7 +149,6 @@ public class TaskImpl extends GoalNodeImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

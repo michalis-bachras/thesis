@@ -69,6 +69,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 			case Goal_metamodelPackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = caseContextualComponent(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -183,6 +184,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				Resource resource = (Resource)theEObject;
 				T result = caseResource(resource);
 				if (result == null) result = caseNode(resource);
+				if (result == null) result = caseContextualComponent(resource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -191,6 +193,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				T result = caseParallelNode(parallelNode);
 				if (result == null) result = caseControlNode(parallelNode);
 				if (result == null) result = caseNode(parallelNode);
+				if (result == null) result = caseContextualComponent(parallelNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -207,6 +210,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				GoalNode goalNode = (GoalNode)theEObject;
 				T result = caseGoalNode(goalNode);
 				if (result == null) result = caseNode(goalNode);
+				if (result == null) result = caseContextualComponent(goalNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -214,23 +218,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				ControlNode controlNode = (ControlNode)theEObject;
 				T result = caseControlNode(controlNode);
 				if (result == null) result = caseNode(controlNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Goal_metamodelPackage.SYNC_NODE: {
-				SyncNode syncNode = (SyncNode)theEObject;
-				T result = caseSyncNode(syncNode);
-				if (result == null) result = caseControlNode(syncNode);
-				if (result == null) result = caseNode(syncNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Goal_metamodelPackage.SYNC_LINK: {
-				SyncLink syncLink = (SyncLink)theEObject;
-				T result = caseSyncLink(syncLink);
-				if (result == null) result = caseDependencyLink(syncLink);
-				if (result == null) result = caseLink(syncLink);
-				if (result == null) result = caseContextualComponent(syncLink);
+				if (result == null) result = caseContextualComponent(controlNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,6 +227,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				T result = caseAction(action);
 				if (result == null) result = caseGoalNode(action);
 				if (result == null) result = caseNode(action);
+				if (result == null) result = caseContextualComponent(action);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -247,6 +236,7 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 				T result = caseTask(task);
 				if (result == null) result = caseGoalNode(task);
 				if (result == null) result = caseNode(task);
+				if (result == null) result = caseContextualComponent(task);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -536,36 +526,6 @@ public class Goal_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseControlNode(ControlNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sync Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sync Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSyncNode(SyncNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sync Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sync Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSyncLink(SyncLink object) {
 		return null;
 	}
 

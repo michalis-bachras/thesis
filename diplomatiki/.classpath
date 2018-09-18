@@ -14,7 +14,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.edit"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.editor"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/goal_metamodel.tests"/>
-	<classpathentry kind="lib" path="C:/Users/ADMIN/Desktop/org.eclipse.emf.common.jar"/>
 	<classpathentry kind="lib" path="C:/Users/debah/eclipse/java-photon/org.eclipse.emf.common.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

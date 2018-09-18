@@ -22,8 +22,6 @@ import goal_metamodel.ParallelLink;
 import goal_metamodel.ParallelNode;
 import goal_metamodel.Resource;
 import goal_metamodel.ResourceDependency;
-import goal_metamodel.SyncLink;
-import goal_metamodel.SyncNode;
 import goal_metamodel.Task;
 import goal_metamodel.TemporalLink;
 import goal_metamodel.TemporalPrecedence;
@@ -185,20 +183,6 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass syncNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass syncLinkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass actionEClass = null;
 
 	/**
@@ -250,7 +234,7 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Goal_metamodelPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -264,7 +248,8 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		if (isInited) return (Goal_metamodelPackage)EPackage.Registry.INSTANCE.getEPackage(Goal_metamodelPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Goal_metamodelPackageImpl theGoal_metamodelPackage = (Goal_metamodelPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Goal_metamodelPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Goal_metamodelPackageImpl());
+		Object registeredGoal_metamodelPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Goal_metamodelPackageImpl theGoal_metamodelPackage = registeredGoal_metamodelPackage instanceof Goal_metamodelPackageImpl ? (Goal_metamodelPackageImpl)registeredGoal_metamodelPackage : new Goal_metamodelPackageImpl();
 
 		isInited = true;
 
@@ -280,7 +265,6 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		// Mark meta-data to indicate it can't be changed
 		theGoal_metamodelPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Goal_metamodelPackage.eNS_URI, theGoal_metamodelPackage);
 		return theGoal_metamodelPackage;
@@ -491,6 +475,15 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 	 */
 	public EClass getLink() {
 		return linkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLink_Available() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -732,62 +725,17 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGoalNode_Available() {
+		return (EAttribute)goalNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getControlNode() {
 		return controlNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSyncNode() {
-		return syncNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSyncNode_NumberOfNodes() {
-		return (EAttribute)syncNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSyncNode_Timeout() {
-		return (EAttribute)syncNodeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSyncLink() {
-		return syncLinkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSyncLink_To() {
-		return (EReference)syncLinkEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSyncLink_From() {
-		return (EReference)syncLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -813,7 +761,7 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAction_Thread() {
+	public EAttribute getAction_Resource_enabled() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -822,8 +770,26 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAction_Resource_enabled() {
+	public EAttribute getAction_StartTime() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_EndTime() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Id() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -921,6 +887,7 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		createEReference(timeDifferenceLinkEClass, TIME_DIFFERENCE_LINK__TO_ACTION);
 
 		linkEClass = createEClass(LINK);
+		createEAttribute(linkEClass, LINK__AVAILABLE);
 
 		contributionEClass = createEClass(CONTRIBUTION);
 		createEAttribute(contributionEClass, CONTRIBUTION__TYPE);
@@ -956,21 +923,16 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		createEReference(parallelLinkEClass, PARALLEL_LINK__FROM);
 
 		goalNodeEClass = createEClass(GOAL_NODE);
+		createEAttribute(goalNodeEClass, GOAL_NODE__AVAILABLE);
 
 		controlNodeEClass = createEClass(CONTROL_NODE);
 
-		syncNodeEClass = createEClass(SYNC_NODE);
-		createEAttribute(syncNodeEClass, SYNC_NODE__NUMBER_OF_NODES);
-		createEAttribute(syncNodeEClass, SYNC_NODE__TIMEOUT);
-
-		syncLinkEClass = createEClass(SYNC_LINK);
-		createEReference(syncLinkEClass, SYNC_LINK__TO);
-		createEReference(syncLinkEClass, SYNC_LINK__FROM);
-
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__REQUIRES);
-		createEAttribute(actionEClass, ACTION__THREAD);
 		createEAttribute(actionEClass, ACTION__RESOURCE_ENABLED);
+		createEAttribute(actionEClass, ACTION__START_TIME);
+		createEAttribute(actionEClass, ACTION__END_TIME);
+		createEAttribute(actionEClass, ACTION__ID);
 
 		taskEClass = createEClass(TASK);
 		createEReference(taskEClass, TASK__HASDECOMPOSITION);
@@ -1011,6 +973,7 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		nodeEClass.getESuperTypes().add(this.getContextualComponent());
 		decompositionEClass.getESuperTypes().add(this.getContextualComponent());
 		dependencyLinkEClass.getESuperTypes().add(this.getLink());
 		logicalPrecedenceEClass.getESuperTypes().add(this.getDependencyLink());
@@ -1026,8 +989,6 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		parallelLinkEClass.getESuperTypes().add(this.getDependencyLink());
 		goalNodeEClass.getESuperTypes().add(this.getNode());
 		controlNodeEClass.getESuperTypes().add(this.getNode());
-		syncNodeEClass.getESuperTypes().add(this.getControlNode());
-		syncLinkEClass.getESuperTypes().add(this.getDependencyLink());
 		actionEClass.getESuperTypes().add(this.getGoalNode());
 		taskEClass.getESuperTypes().add(this.getGoalNode());
 
@@ -1063,6 +1024,7 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		initEReference(getTimeDifferenceLink_To_action(), this.getAction(), null, "to_action", null, 1, 1, TimeDifferenceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLink_Available(), ecorePackage.getEBoolean(), "available", "true", 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contributionEClass, Contribution.class, "Contribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContribution_Type(), this.getContributionType(), "type", "PPS", 0, 1, Contribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1098,21 +1060,16 @@ public class Goal_metamodelPackageImpl extends EPackageImpl implements Goal_meta
 		initEReference(getParallelLink_From(), this.getGoalNode(), null, "from", null, 1, 1, ParallelLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(goalNodeEClass, GoalNode.class, "GoalNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGoalNode_Available(), ecorePackage.getEBoolean(), "available", "true", 0, 1, GoalNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controlNodeEClass, ControlNode.class, "ControlNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(syncNodeEClass, SyncNode.class, "SyncNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSyncNode_NumberOfNodes(), theXMLTypePackage.getInt(), "NumberOfNodes", null, 0, 1, SyncNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSyncNode_Timeout(), theXMLTypePackage.getInt(), "Timeout", null, 0, 1, SyncNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(syncLinkEClass, SyncLink.class, "SyncLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSyncLink_To(), this.getParallelNode(), null, "to", null, 1, 1, SyncLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSyncLink_From(), this.getGoalNode(), null, "from", null, 1, 1, SyncLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_Requires(), this.getResource(), null, "requires", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAction_Thread(), theXMLTypePackage.getInt(), "thread", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_Resource_enabled(), ecorePackage.getEBoolean(), "resource_enabled", "true", 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_StartTime(), ecorePackage.getEDate(), "StartTime", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_EndTime(), ecorePackage.getEDate(), "EndTime", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Id(), ecorePackage.getEString(), "id", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTask_Hasdecomposition(), this.getDecomposition(), null, "hasdecomposition", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

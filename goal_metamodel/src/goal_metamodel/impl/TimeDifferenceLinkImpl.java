@@ -274,7 +274,7 @@ public class TimeDifferenceLinkImpl extends TemporalPrecedenceImpl implements Ti
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (TimeDifference: ");
 		result.append(timeDifference);
 		result.append(')');

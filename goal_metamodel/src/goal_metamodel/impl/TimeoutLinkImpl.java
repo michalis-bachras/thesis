@@ -274,7 +274,7 @@ public class TimeoutLinkImpl extends TemporalPrecedenceImpl implements TimeoutLi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (TimeoutPeriod: ");
 		result.append(timeoutPeriod);
 		result.append(')');

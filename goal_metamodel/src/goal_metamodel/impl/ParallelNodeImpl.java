@@ -2,15 +2,12 @@
  */
 package goal_metamodel.impl;
 
-import goal_metamodel.Action;
 import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.ParallelNode;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -310,7 +307,7 @@ public class ParallelNodeImpl extends ControlNodeImpl implements ParallelNode {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (NumberOfNodes: ");
 		result.append(numberOfNodes);
 		result.append(", Timeout: ");

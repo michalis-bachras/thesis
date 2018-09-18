@@ -7,7 +7,7 @@ import aDG_metamodel.ADG;
 import aDG_metamodel.ADG_metamodelFactory;
 import aDG_metamodel.Link;
 import goal_metamodel.TimeDifferenceLink;
-import goal_metamodel.TimeoutLink;
+//import goal_metamodel.TimeoutLink;
 
 
 public class TimeDifferenceRule {

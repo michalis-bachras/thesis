@@ -11,12 +11,12 @@ import aDG_metamodel.Node;
 import aDG_metamodel.SplitNode;
 
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+//import java.util.List;
+//import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;

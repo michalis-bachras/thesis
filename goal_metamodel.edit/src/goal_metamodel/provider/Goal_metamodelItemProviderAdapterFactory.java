@@ -141,26 +141,26 @@ public class Goal_metamodelItemProviderAdapterFactory extends Goal_metamodelAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link goal_metamodel.LogicalPrecondition} instances.
+	 * This keeps track of the one adapter used for all {@link goal_metamodel.LogicalPrecedence} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LogicalPreconditionItemProvider logicalPreconditionItemProvider;
+	protected LogicalPrecedenceItemProvider logicalPrecedenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link goal_metamodel.LogicalPrecondition}.
+	 * This creates an adapter for a {@link goal_metamodel.LogicalPrecedence}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLogicalPreconditionAdapter() {
-		if (logicalPreconditionItemProvider == null) {
-			logicalPreconditionItemProvider = new LogicalPreconditionItemProvider(this);
+	public Adapter createLogicalPrecedenceAdapter() {
+		if (logicalPrecedenceItemProvider == null) {
+			logicalPrecedenceItemProvider = new LogicalPrecedenceItemProvider(this);
 		}
 
-		return logicalPreconditionItemProvider;
+		return logicalPrecedenceItemProvider;
 	}
 
 	/**
@@ -187,26 +187,26 @@ public class Goal_metamodelItemProviderAdapterFactory extends Goal_metamodelAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link goal_metamodel.TemporalPrecondition} instances.
+	 * This keeps track of the one adapter used for all {@link goal_metamodel.TemporalPrecedence} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TemporalPreconditionItemProvider temporalPreconditionItemProvider;
+	protected TemporalPrecedenceItemProvider temporalPrecedenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link goal_metamodel.TemporalPrecondition}.
+	 * This creates an adapter for a {@link goal_metamodel.TemporalPrecedence}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTemporalPreconditionAdapter() {
-		if (temporalPreconditionItemProvider == null) {
-			temporalPreconditionItemProvider = new TemporalPreconditionItemProvider(this);
+	public Adapter createTemporalPrecedenceAdapter() {
+		if (temporalPrecedenceItemProvider == null) {
+			temporalPrecedenceItemProvider = new TemporalPrecedenceItemProvider(this);
 		}
 
-		return temporalPreconditionItemProvider;
+		return temporalPrecedenceItemProvider;
 	}
 
 	/**
@@ -633,9 +633,9 @@ public class Goal_metamodelItemProviderAdapterFactory extends Goal_metamodelAdap
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (decompositionItemProvider != null) decompositionItemProvider.dispose();
 		if (dependencyLinkItemProvider != null) dependencyLinkItemProvider.dispose();
-		if (logicalPreconditionItemProvider != null) logicalPreconditionItemProvider.dispose();
+		if (logicalPrecedenceItemProvider != null) logicalPrecedenceItemProvider.dispose();
 		if (temporalLinkItemProvider != null) temporalLinkItemProvider.dispose();
-		if (temporalPreconditionItemProvider != null) temporalPreconditionItemProvider.dispose();
+		if (temporalPrecedenceItemProvider != null) temporalPrecedenceItemProvider.dispose();
 		if (timeoutLinkItemProvider != null) timeoutLinkItemProvider.dispose();
 		if (timeDifferenceLinkItemProvider != null) timeDifferenceLinkItemProvider.dispose();
 		if (linkItemProvider != null) linkItemProvider.dispose();

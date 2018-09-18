@@ -25,14 +25,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//Decomposition/decomposed_to"/>
     </genClasses>
     <genClasses ecoreClass="goal_metamodel.ecore#//DependencyLink"/>
-    <genClasses ecoreClass="goal_metamodel.ecore#//LogicalPrecondition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//LogicalPrecondition/from_goalnode"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//LogicalPrecondition/to_goalnode"/>
+    <genClasses ecoreClass="goal_metamodel.ecore#//LogicalPrecedence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//LogicalPrecedence/from_goalnode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//LogicalPrecedence/to_goalnode"/>
     </genClasses>
     <genClasses ecoreClass="goal_metamodel.ecore#//TemporalLink"/>
-    <genClasses ecoreClass="goal_metamodel.ecore#//TemporalPrecondition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//TemporalPrecondition/from"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//TemporalPrecondition/to"/>
+    <genClasses ecoreClass="goal_metamodel.ecore#//TemporalPrecedence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//TemporalPrecedence/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference goal_metamodel.ecore#//TemporalPrecedence/to"/>
     </genClasses>
     <genClasses ecoreClass="goal_metamodel.ecore#//TimeoutLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute goal_metamodel.ecore#//TimeoutLink/TimeoutPeriod"/>

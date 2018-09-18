@@ -163,6 +163,7 @@ public class Goal_metamodelActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("goal_metamodel-settings"));
 		toolBarManager.add(new Separator("goal_metamodel-additions"));
 	}

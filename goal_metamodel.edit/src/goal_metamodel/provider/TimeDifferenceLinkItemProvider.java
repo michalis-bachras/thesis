@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TimeDifferenceLinkItemProvider extends TemporalPreconditionItemProvider {
+public class TimeDifferenceLinkItemProvider extends TemporalPrecedenceItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

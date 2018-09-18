@@ -1,14 +1,14 @@
 package diplomatiki;
 import goal_metamodel.*;
 
-import java.io.File;
+//import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintStream;
+//import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.*;
 
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
+//import org.eclipse.emf.common.util.BasicEList;
+//import org.eclipse.emf.common.util.EList;
 
 import aDG_metamodel.ADG;
 import aDG_metamodel.ADG_metamodelFactory;
@@ -35,7 +35,7 @@ public class Client {
 		
 		
 		List<Task> tasks = new ArrayList<Task>(goalmodel.getTasks().values());
-		List<Action> actions = new ArrayList<Action>(goalmodel.getActions().values());
+		//List<Action> actions = new ArrayList<Action>(goalmodel.getActions().values());
 		Collections.sort(tasks, new Comparator<Task>() {                     //sort tasks list based on depth
 			public int compare(Task T1,Task T2) {
 

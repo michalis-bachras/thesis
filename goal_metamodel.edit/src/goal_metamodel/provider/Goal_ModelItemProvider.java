@@ -246,7 +246,7 @@ public class Goal_ModelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Goal_metamodelPackage.Literals.GOAL_MODEL__LINK,
-				 Goal_metamodelFactory.eINSTANCE.createLogicalPrecondition()));
+				 Goal_metamodelFactory.eINSTANCE.createLogicalPrecedence()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -256,7 +256,7 @@ public class Goal_ModelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Goal_metamodelPackage.Literals.GOAL_MODEL__LINK,
-				 Goal_metamodelFactory.eINSTANCE.createTemporalPrecondition()));
+				 Goal_metamodelFactory.eINSTANCE.createTemporalPrecedence()));
 
 		newChildDescriptors.add
 			(createChildParameter

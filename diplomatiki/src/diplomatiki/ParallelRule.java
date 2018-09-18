@@ -8,16 +8,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.emf.common.util.EList;
+//import org.eclipse.emf.common.util.EList;
 
 import aDG_metamodel.ADG;
 import aDG_metamodel.ADG_metamodelFactory;
 import aDG_metamodel.ActionNode;
 import aDG_metamodel.JoinNode;
 import aDG_metamodel.Link;
-import aDG_metamodel.Node;
+//import aDG_metamodel.Node;
 import aDG_metamodel.SplitNode;
-import goal_metamodel.Action;
+//import goal_metamodel.Action;
 import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_Model;
 import goal_metamodel.ParallelNode;

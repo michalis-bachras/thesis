@@ -184,24 +184,6 @@ public interface Goal_metamodelFactory extends EFactory {
 	ControlNode createControlNode();
 
 	/**
-	 * Returns a new object of class '<em>Sync Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sync Node</em>'.
-	 * @generated
-	 */
-	SyncNode createSyncNode();
-
-	/**
-	 * Returns a new object of class '<em>Sync Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sync Link</em>'.
-	 * @generated
-	 */
-	SyncLink createSyncLink();
-
-	/**
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

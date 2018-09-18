@@ -4,7 +4,6 @@ package goal_metamodel;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * <!-- begin-user-doc -->

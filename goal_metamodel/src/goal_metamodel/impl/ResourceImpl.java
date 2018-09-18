@@ -44,7 +44,7 @@ public class ResourceImpl extends NodeImpl implements Resource {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean AVAILABLE_EDEFAULT = true;
+	protected static final boolean AVAILABLE_EDEFAULT = false;
 	/**
 	 * The cached value of the '{@link #isAvailable() <em>Available</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -162,7 +162,7 @@ public class ResourceImpl extends NodeImpl implements Resource {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (Available: ");
 		result.append(available);
 		result.append(')');

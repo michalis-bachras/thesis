@@ -31,7 +31,7 @@ import goal_metamodel.TimeDifferenceLink;
 import goal_metamodel.TimeoutLink;
 
 public class Generator {
-	
+	//*************************CHECK LINE 402
 	
 	private HashMap<String,Task> tasks = new HashMap<String,Task>();
 	private HashMap<String,Action> actions = new HashMap<String,Action>(); 
@@ -399,13 +399,13 @@ public class Generator {
 		List<String> all_action_keys = new ArrayList<String>(action_keys);
 		
 		Collections.shuffle(goal_nodes);
-		int parallel_depth = 3;
-		for(int p =0; p<parallelnodesnumber;p++) {
+		int parallel_depth = 2;                            //WITH THIS VARIABLE WE DEFINE THE DEPTH WHERE THE PARALLEL NODES WILL BE OCCURED ***CHECK LINE 586 
+		for(int p =0; p<parallelnodesnumber/2;p++) {
 			if(goal_nodes.size() == 0) {
 				System.out.println("Invalid model");
 				System.exit(0);
 			}
-			Random rdepth = new Random();
+			//Random rdepth = new Random();
 		
 			System.out.println(parallel_depth);
 			ParallelNode P = factory.createParallelNode();
@@ -419,7 +419,7 @@ public class Generator {
 			Random rand1 = new Random();
 			int choice1;
 			String g1_name;
-			if(p<parallelnodesnumber-1) {
+			if(p<parallelnodesnumber-1 && task_keys.size()>0) {
 				choice1 = rand1.nextInt(task_keys.size());
 				g1_name = task_keys.get(choice1);
 			}
@@ -440,7 +440,7 @@ public class Generator {
 			while(!flag1) {
 				if(g1.getParallelLinks().size()>0 ||( g1.getdepth()) == 1 || g1.getdepth()> parallel_depth) {
 					rand1 = new Random();
-					if(p<parallelnodesnumber-1) {
+					if(p<parallelnodesnumber-1 && task_keys.size()>0) {
 						choice1 = rand1.nextInt(task_keys.size());
 						g1_name = task_keys.get(choice1);
 					}
@@ -457,7 +457,7 @@ public class Generator {
 				}
 				else {
 					parallellinksnumber = parallellinksnumber-1;
-					if(p<parallelnodesnumber-1) {
+					if(p<parallelnodesnumber-1 && task_keys.size()>0) {
 						task_keys.remove(choice1);
 					}
 					else {

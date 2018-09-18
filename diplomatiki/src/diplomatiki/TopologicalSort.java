@@ -34,8 +34,8 @@ package diplomatiki;
  * expand out the cycle.
  */
 import java.util.*; // For List, Map.
-import org.eclipse.emf.*;
-import aDG_metamodel.ActionNode;
+//import org.eclipse.emf.*;
+//import aDG_metamodel.ActionNode;
 import aDG_metamodel.JoinNode;
 import aDG_metamodel.Link;
 import aDG_metamodel.Node;

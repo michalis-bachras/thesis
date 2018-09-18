@@ -1108,9 +1108,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_nZCtEDjEEeiWVemb5RI00g" name="LogicalPrecondition" tooltipText="" outgoingEdges="_UqxtwDjdEeiWVemb5RI00g _ZvwEAEPUEeiliuuNGZFFxg _709ZUEPVEeiliuuNGZFFxg" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecondition"/>
-      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecondition"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_nZCtEDjEEeiWVemb5RI00g" name="LogicalPrecedence" tooltipText="" outgoingEdges="_UqxtwDjdEeiWVemb5RI00g _ZvwEAEPUEeiliuuNGZFFxg _709ZUEPVEeiliuuNGZFFxg" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecedence"/>
+      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecedence"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1142,9 +1142,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_5Y6zADjEEeiWVemb5RI00g" name="TemporalPrecondition" tooltipText="" outgoingEdges="__sGoUDjEEeiWVemb5RI00g _0f33kEPUEeiliuuNGZFFxg _5KelgEPUEeiliuuNGZFFxg" incomingEdges="_L3KP8DjFEeiWVemb5RI00g _cxaxoDjFEeiWVemb5RI00g" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecondition"/>
-      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecondition"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_5Y6zADjEEeiWVemb5RI00g" name="TemporalPrecedence" tooltipText="" outgoingEdges="__sGoUDjEEeiWVemb5RI00g _0f33kEPUEeiliuuNGZFFxg _5KelgEPUEeiliuuNGZFFxg" incomingEdges="_L3KP8DjFEeiWVemb5RI00g _cxaxoDjFEeiWVemb5RI00g" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecedence"/>
+      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecedence"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1154,8 +1154,8 @@
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="__sGoUDjEEeiWVemb5RI00g" sourceNode="_5Y6zADjEEeiWVemb5RI00g" targetNode="_0D7rUDjEEeiWVemb5RI00g">
-      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecondition"/>
-      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecondition"/>
+      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecedence"/>
+      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//TemporalPrecedence"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__sHPYDjEEeiWVemb5RI00g" targetArrow="InputClosedArrow" routingStyle="tree">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="__sHPYTjEEeiWVemb5RI00g" showIcon="false">
@@ -1228,8 +1228,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_UqxtwDjdEeiWVemb5RI00g" sourceNode="_nZCtEDjEEeiWVemb5RI00g" targetNode="_k_NH4DjEEeiWVemb5RI00g">
-      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecondition"/>
-      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecondition"/>
+      <target xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecedence"/>
+      <semanticElements xmi:type="ecore:EClass" href="goal_metamodel.ecore#//LogicalPrecedence"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_r0u3I0GJEeixYqXX4ZBTSw" targetArrow="InputClosedArrow" routingStyle="tree">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_r0u3JEGJEeixYqXX4ZBTSw" showIcon="false">
@@ -1712,8 +1712,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZvwEAEPUEeiliuuNGZFFxg" name="[1..1] from_goalnode" sourceNode="_nZCtEDjEEeiWVemb5RI00g" targetNode="_ydzh4EPDEeiliuuNGZFFxg">
-      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecondition/from_goalnode"/>
-      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecondition/from_goalnode"/>
+      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecedence/from_goalnode"/>
+      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecedence/from_goalnode"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6syQUEPVEeiliuuNGZFFxg" description="_FcPN8EMYEeiliuuNGZFFxg" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6syQUUPVEeiliuuNGZFFxg" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -1723,8 +1723,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0f33kEPUEeiliuuNGZFFxg" name="[1..1] from" sourceNode="_5Y6zADjEEeiWVemb5RI00g" targetNode="_ydzh4EPDEeiliuuNGZFFxg">
-      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecondition/from"/>
-      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecondition/from"/>
+      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecedence/from"/>
+      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecedence/from"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_9oMuAEPUEeiliuuNGZFFxg" description="_FcPN8EMYEeiliuuNGZFFxg" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_9oMuAUPUEeiliuuNGZFFxg" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -1734,8 +1734,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_5KelgEPUEeiliuuNGZFFxg" name="[1..1] to" sourceNode="_5Y6zADjEEeiWVemb5RI00g" targetNode="_ydzh4EPDEeiliuuNGZFFxg">
-      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecondition/to"/>
-      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecondition/to"/>
+      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecedence/to"/>
+      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//TemporalPrecedence/to"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_9FXGsEPUEeiliuuNGZFFxg" description="_FcPN8EMYEeiliuuNGZFFxg" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_9FXGsUPUEeiliuuNGZFFxg" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -1789,8 +1789,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_709ZUEPVEeiliuuNGZFFxg" name="[1..1] to_goalnode" sourceNode="_nZCtEDjEEeiWVemb5RI00g" targetNode="_ydzh4EPDEeiliuuNGZFFxg">
-      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecondition/to_goalnode"/>
-      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecondition/to_goalnode"/>
+      <target xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecedence/to_goalnode"/>
+      <semanticElements xmi:type="ecore:EReference" href="goal_metamodel.ecore#//LogicalPrecedence/to_goalnode"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_BmjkgEPWEeiliuuNGZFFxg" description="_FcPN8EMYEeiliuuNGZFFxg" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_BmjkgUPWEeiliuuNGZFFxg" showIcon="false">
           <labelFormat>bold</labelFormat>

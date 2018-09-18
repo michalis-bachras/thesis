@@ -144,14 +144,6 @@ public class Goal_metamodelAdapterFactory extends AdapterFactoryImpl {
 				return createControlNodeAdapter();
 			}
 			@Override
-			public Adapter caseSyncNode(SyncNode object) {
-				return createSyncNodeAdapter();
-			}
-			@Override
-			public Adapter caseSyncLink(SyncLink object) {
-				return createSyncLinkAdapter();
-			}
-			@Override
 			public Adapter caseAction(Action object) {
 				return createActionAdapter();
 			}
@@ -442,34 +434,6 @@ public class Goal_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createControlNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link goal_metamodel.SyncNode <em>Sync Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see goal_metamodel.SyncNode
-	 * @generated
-	 */
-	public Adapter createSyncNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link goal_metamodel.SyncLink <em>Sync Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see goal_metamodel.SyncLink
-	 * @generated
-	 */
-	public Adapter createSyncLinkAdapter() {
 		return null;
 	}
 

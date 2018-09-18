@@ -1,11 +1,11 @@
 package diplomatiki;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+//import java.util.HashSet;
 
 import goal_metamodel.*;
 
-import org.eclipse.emf.common.util.*;
+//import org.eclipse.emf.common.util.*;
 
 public  class Populator {
 
@@ -18,7 +18,7 @@ public  class Populator {
 		private ArrayList<TemporalPrecedence> tplinks = new ArrayList<TemporalPrecedence>();
 		private ArrayList<ResourceDependency> rdlinks = new ArrayList<ResourceDependency>();
 		private ArrayList<Contribution> contributionlinks = new ArrayList<Contribution>();
-		private ArrayList<TimeDifferenceLink> time_difference_links = new ArrayList<TimeDifferenceLink>();
+	//	private ArrayList<TimeDifferenceLink> time_difference_links = new ArrayList<TimeDifferenceLink>();
 		private ArrayList<TimeoutLink> timeout_links = new ArrayList<TimeoutLink>();
 	
 		public Populator() {}

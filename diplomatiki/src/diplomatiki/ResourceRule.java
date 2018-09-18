@@ -7,7 +7,7 @@ import aDG_metamodel.ADG;
 import aDG_metamodel.ADG_metamodelFactory;
 import aDG_metamodel.Link;
 import goal_metamodel.Action;
-import goal_metamodel.Resource;
+//import goal_metamodel.Resource;
 import goal_metamodel.ResourceDependency;
 
 public class ResourceRule {

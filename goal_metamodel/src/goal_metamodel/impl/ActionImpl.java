@@ -6,9 +6,8 @@ import goal_metamodel.Action;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Resource;
 import goal_metamodel.Task;
-
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,8 +32,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link goal_metamodel.impl.ActionImpl#getRequires <em>Requires</em>}</li>
- *   <li>{@link goal_metamodel.impl.ActionImpl#getThread <em>Thread</em>}</li>
  *   <li>{@link goal_metamodel.impl.ActionImpl#isResource_enabled <em>Resource enabled</em>}</li>
+ *   <li>{@link goal_metamodel.impl.ActionImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link goal_metamodel.impl.ActionImpl#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link goal_metamodel.impl.ActionImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,26 +102,6 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 	protected EList<Resource> requires;
 
 	/**
-	 * The default value of the '{@link #getThread() <em>Thread</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getThread()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String THREAD_EDEFAULT = "0";
-
-	/**
-	 * The cached value of the '{@link #getThread() <em>Thread</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getThread()
-	 * @generated
-	 * @ordered
-	 */
-	protected String thread = THREAD_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #isResource_enabled() <em>Resource enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,6 +120,66 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 	 * @ordered
 	 */
 	protected boolean resource_enabled = RESOURCE_ENABLED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStartTime() <em>Start Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date START_TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStartTime() <em>Start Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date startTime = START_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEndTime() <em>End Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date END_TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEndTime() <em>End Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date endTime = END_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,27 +219,6 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getThread() {
-		return thread;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setThread(String newThread) {
-		String oldThread = thread;
-		thread = newThread;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.ACTION__THREAD, oldThread, thread));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isResource_enabled() {
 		return resource_enabled;
 	}
@@ -213,6 +233,69 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 		resource_enabled = newResource_enabled;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.ACTION__RESOURCE_ENABLED, oldResource_enabled, resource_enabled));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getStartTime() {
+		return startTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStartTime(Date newStartTime) {
+		Date oldStartTime = startTime;
+		startTime = newStartTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.ACTION__START_TIME, oldStartTime, startTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getEndTime() {
+		return endTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndTime(Date newEndTime) {
+		Date oldEndTime = endTime;
+		endTime = newEndTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.ACTION__END_TIME, oldEndTime, endTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Goal_metamodelPackage.ACTION__ID, oldId, id));
 	}
 
 	/**
@@ -239,10 +322,14 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 		switch (featureID) {
 			case Goal_metamodelPackage.ACTION__REQUIRES:
 				return getRequires();
-			case Goal_metamodelPackage.ACTION__THREAD:
-				return getThread();
 			case Goal_metamodelPackage.ACTION__RESOURCE_ENABLED:
 				return isResource_enabled();
+			case Goal_metamodelPackage.ACTION__START_TIME:
+				return getStartTime();
+			case Goal_metamodelPackage.ACTION__END_TIME:
+				return getEndTime();
+			case Goal_metamodelPackage.ACTION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,11 +347,17 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 				getRequires().clear();
 				getRequires().addAll((Collection<? extends Resource>)newValue);
 				return;
-			case Goal_metamodelPackage.ACTION__THREAD:
-				setThread((String)newValue);
-				return;
 			case Goal_metamodelPackage.ACTION__RESOURCE_ENABLED:
 				setResource_enabled((Boolean)newValue);
+				return;
+			case Goal_metamodelPackage.ACTION__START_TIME:
+				setStartTime((Date)newValue);
+				return;
+			case Goal_metamodelPackage.ACTION__END_TIME:
+				setEndTime((Date)newValue);
+				return;
+			case Goal_metamodelPackage.ACTION__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,11 +374,17 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 			case Goal_metamodelPackage.ACTION__REQUIRES:
 				getRequires().clear();
 				return;
-			case Goal_metamodelPackage.ACTION__THREAD:
-				setThread(THREAD_EDEFAULT);
-				return;
 			case Goal_metamodelPackage.ACTION__RESOURCE_ENABLED:
 				setResource_enabled(RESOURCE_ENABLED_EDEFAULT);
+				return;
+			case Goal_metamodelPackage.ACTION__START_TIME:
+				setStartTime(START_TIME_EDEFAULT);
+				return;
+			case Goal_metamodelPackage.ACTION__END_TIME:
+				setEndTime(END_TIME_EDEFAULT);
+				return;
+			case Goal_metamodelPackage.ACTION__ID:
+				setId(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -301,10 +400,14 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 		switch (featureID) {
 			case Goal_metamodelPackage.ACTION__REQUIRES:
 				return requires != null && !requires.isEmpty();
-			case Goal_metamodelPackage.ACTION__THREAD:
-				return thread != THREAD_EDEFAULT;
 			case Goal_metamodelPackage.ACTION__RESOURCE_ENABLED:
 				return resource_enabled != RESOURCE_ENABLED_EDEFAULT;
+			case Goal_metamodelPackage.ACTION__START_TIME:
+				return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
+			case Goal_metamodelPackage.ACTION__END_TIME:
+				return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
+			case Goal_metamodelPackage.ACTION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -318,11 +421,15 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (thread: ");
-		result.append(thread);
-		result.append(", resource_enabled: ");
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (resource_enabled: ");
 		result.append(resource_enabled);
+		result.append(", StartTime: ");
+		result.append(startTime);
+		result.append(", EndTime: ");
+		result.append(endTime);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

@@ -75,8 +75,6 @@ public class Goal_metamodelFactoryImpl extends EFactoryImpl implements Goal_meta
 			case Goal_metamodelPackage.PARALLEL_LINK: return createParallelLink();
 			case Goal_metamodelPackage.GOAL_NODE: return createGoalNode();
 			case Goal_metamodelPackage.CONTROL_NODE: return createControlNode();
-			case Goal_metamodelPackage.SYNC_NODE: return createSyncNode();
-			case Goal_metamodelPackage.SYNC_LINK: return createSyncLink();
 			case Goal_metamodelPackage.ACTION: return createAction();
 			case Goal_metamodelPackage.TASK: return createTask();
 			default:
@@ -296,26 +294,6 @@ public class Goal_metamodelFactoryImpl extends EFactoryImpl implements Goal_meta
 	public ControlNode createControlNode() {
 		ControlNodeImpl controlNode = new ControlNodeImpl();
 		return controlNode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SyncNode createSyncNode() {
-		SyncNodeImpl syncNode = new SyncNodeImpl();
-		return syncNode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SyncLink createSyncLink() {
-		SyncLinkImpl syncLink = new SyncLinkImpl();
-		return syncLink;
 	}
 
 	/**

@@ -2,8 +2,6 @@
  */
 package goal_metamodel;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Node</b></em>'.
@@ -21,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Node extends EObject {
+public interface Node extends ContextualComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
