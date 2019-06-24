@@ -5,6 +5,8 @@ package goal_metamodel.impl;
 import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.ParallelLink;
+
+import java.io.Serializable;
 import java.util.HashSet;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,7 +28,12 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
  *
  * @generated
  */
-public class GoalNodeImpl extends NodeImpl implements GoalNode {
+public class GoalNodeImpl extends NodeImpl implements GoalNode,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 15L;
+
 	/**
 	 * The default value of the '{@link #isAvailable() <em>Available</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -183,7 +190,7 @@ public class GoalNodeImpl extends NodeImpl implements GoalNode {
 		return OR_dec_ids;
 	}
 	
-	protected String id = "0";  //id για το ADG collection που ανήκει ο goalnode
+	protected String id = "0";  //id οΏ½οΏ½οΏ½ οΏ½οΏ½ ADG collection οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½ goalnode
 	
 	public String getid() {
 		return id;

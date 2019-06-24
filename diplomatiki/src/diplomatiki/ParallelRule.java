@@ -57,7 +57,7 @@ public class ParallelRule {
 			//System.out.println(p.getValue().getName());
 			if(ADG_Collections.containsKey(parent_id)) {							//see if the ADG Collection in which the pseudonode Pi will be put,exists
 				
-				if(parent_id == "0") {
+				if(parent_id.equals("0") ) {
 					
 					ActionNode a = adg_factory.createActionNode();
 					a.setName(p.getKey());		//create parallel pseudonode Pi

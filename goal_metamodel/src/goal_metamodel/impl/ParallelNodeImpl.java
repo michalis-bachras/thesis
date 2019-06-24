@@ -6,6 +6,7 @@ import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.ParallelNode;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import org.eclipse.emf.common.notify.Notification;
@@ -30,8 +31,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ParallelNodeImpl extends ControlNodeImpl implements ParallelNode {
+public class ParallelNodeImpl extends ControlNodeImpl implements ParallelNode,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8L;
+
 	protected int depth;
 	
 	public void set_depth(int depth) {

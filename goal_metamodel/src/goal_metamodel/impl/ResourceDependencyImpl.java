@@ -7,6 +7,8 @@ import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Resource;
 import goal_metamodel.ResourceDependency;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ResourceDependencyImpl extends DependencyLinkImpl implements ResourceDependency {
+public class ResourceDependencyImpl extends DependencyLinkImpl implements ResourceDependency,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9L;
+
 	/**
 	 * The cached value of the '{@link #getTo_resource() <em>To resource</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -7,6 +7,7 @@ import goal_metamodel.DecompositionType;
 import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,8 +37,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DecompositionImpl extends ContextualComponentImpl implements Decomposition {
+public class DecompositionImpl extends ContextualComponentImpl implements Decomposition,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4L;
+
 	protected String AND_id;
 	
 	public void setANDid(String AND_id) {

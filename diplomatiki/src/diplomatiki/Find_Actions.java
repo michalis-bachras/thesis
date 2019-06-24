@@ -90,7 +90,7 @@ public class Find_Actions {
 		int max_depth = tasks.get(0).getdepth();
 		int size = tasks.size();
 		int i=0;
-		HashMap<String,Action> global_parallel_actions = new HashMap<String,Action>();
+		HashMap<String,Action> global_parallel_actions = new HashMap<String,Action>(); 
 		while(i<size) {
 			
 			boolean break_flag = false;
@@ -147,6 +147,7 @@ public class Find_Actions {
 					
 					t.setOuterList(inner);    //put in a list the set that satisfies t 
 					t.getOuterList().get(0).addAll(parallel_actions2);   //put in the above set the created pseudo parallel actions
+					//Νομιζω ότι μπορω να βάλω την parallel_actions2 κατευθειαν στην inner να γλιτωσω χρόνο
 					
 				}
 				
@@ -402,4 +403,17 @@ public class Find_Actions {
 		
 		
 	}
+	
+	
+	
+	public static void FindBestPath(List<Task> tasks,ArrayList<Task> parallel_tasks,Goal_Model goalmodel) {
+		
+		Task root = goalmodel.getTasks().get("root");
+		System.out.println(root.getName());
+		
+	}
+	
+	
+	
+	
 }

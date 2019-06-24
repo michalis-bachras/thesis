@@ -82,11 +82,17 @@ public class Generator {
 			t.setid("0");
 		}
 		
+		Random randCost = new Random();
+		int cost = 0;
+		
 		for (int i = 0; i < actionsNumber; i++) {
 			Action a = factory.createAction();
 			a.setName("A"+(i+1));
 			actions.put("A"+(i+1), a);
 			a.setid("0");
+			cost = randCost.nextInt(25) +1;
+			a.setCost(cost);
+			
 		}
 		
 		

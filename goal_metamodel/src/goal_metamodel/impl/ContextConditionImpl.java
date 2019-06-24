@@ -5,6 +5,8 @@ package goal_metamodel.impl;
 import goal_metamodel.ContextCondition;
 import goal_metamodel.Goal_metamodelPackage;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -16,8 +18,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ContextConditionImpl extends MinimalEObjectImpl.Container implements ContextCondition {
+public class ContextConditionImpl extends MinimalEObjectImpl.Container implements ContextCondition,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 19L;
+
 	protected String affected_node ;
 	
 	protected String description;

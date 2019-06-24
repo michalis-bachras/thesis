@@ -5,6 +5,7 @@ import goal_metamodel.Decomposition;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Task;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -27,7 +28,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TaskImpl extends GoalNodeImpl implements Task {
+public class TaskImpl extends GoalNodeImpl implements Task,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3L;
+
+
+
 	/**
 	 * The cached value of the '{@link #getHasdecomposition() <em>Hasdecomposition</em>}' containment reference.
 	 * <!-- begin-user-doc -->

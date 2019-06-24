@@ -5,6 +5,8 @@ package goal_metamodel.impl;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Link;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -22,7 +24,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LinkImpl extends ContextualComponentImpl implements Link {
+public class LinkImpl extends ContextualComponentImpl implements Link,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 16L;
 	/**
 	 * The default value of the '{@link #isAvailable() <em>Available</em>}' attribute.
 	 * <!-- begin-user-doc -->

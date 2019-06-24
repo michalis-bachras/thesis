@@ -6,6 +6,8 @@ import goal_metamodel.Action;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.TimeDifferenceLink;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TimeDifferenceLinkImpl extends TemporalPrecedenceImpl implements TimeDifferenceLink {
+public class TimeDifferenceLinkImpl extends TemporalPrecedenceImpl implements TimeDifferenceLink,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 10L;
+
 	/**
 	 * The default value of the '{@link #getTimeDifference() <em>Time Difference</em>}' attribute.
 	 * <!-- begin-user-doc -->

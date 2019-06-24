@@ -6,6 +6,8 @@ import goal_metamodel.Action;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Resource;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -23,11 +25,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ResourceImpl extends NodeImpl implements Resource {
+public class ResourceImpl extends NodeImpl implements Resource,Serializable {
 	
 	
 	
-	 protected Action parent_action;
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5L;
+	protected Action parent_action;
 	 
 	 public void set_parent_action(Action action) {
 		 parent_action = action;

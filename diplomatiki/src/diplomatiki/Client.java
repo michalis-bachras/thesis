@@ -1,8 +1,12 @@
 package diplomatiki;
 import goal_metamodel.*;
 
+import java.io.File;
+import java.io.FileInputStream;
 //import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 //import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.*;
@@ -20,17 +24,25 @@ import aDG_metamodel.Node;
 
 public class Client {
 
-	public static void main(String[] args) throws CloneNotSupportedException, FileNotFoundException {
+	public static void main(String[] args) throws CloneNotSupportedException, IOException, ClassNotFoundException {
 	
 	
 		
-		Generator g = new Generator();
+//		Generator g = new Generator();
+//		
+//		Goal_Model goalmodel = g.generate(100, 100,4,10,1,1,5,2,1,1,20);                //create goal model
+//		
+//		Context_change context = new Context_change(goalmodel.getTasks(),goalmodel.getActions(),goalmodel.getResoures());
+//		context.change(goalmodel, 1, 1);                  //update goal model based on context
+//		System.out.println("");
+//		printGoalModel(goalmodel);
 		
-		Goal_Model goalmodel = g.generate(100, 100,4,10,1,1,5,2,1,1,20);                //create goal model
+		FileInputStream fi = new FileInputStream(new File("myObjects.txt"));
+		ObjectInputStream oi = new ObjectInputStream(fi);
 		
-		Context_change context = new Context_change(goalmodel.getTasks(),goalmodel.getActions(),goalmodel.getResoures());
-		context.change(goalmodel, 1, 1);                  //update goal model based on context
-		System.out.println("");
+		Goal_Model goalmodel = (Goal_Model) oi.readObject();
+		//System.out.println(readGoalModel.getActions().get("A1"));
+		
 		printGoalModel(goalmodel);
 		
 		
@@ -54,10 +66,13 @@ public class Client {
 		long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
 		long start = System.currentTimeMillis();
 		ArrayList<Task> parallel_tasks = new ArrayList<Task>(); 
+		//Find_Actions.FindBestPath(tasks, parallel_tasks, goalmodel);
 		Find_Actions.Find(tasks,parallel_tasks,goalmodel);    //find all sets of actions that satisfy each task
 		System.out.println("ok");
 		ContributionRule cr = new ContributionRule(goalmodel.getcontributionlinks());
-		cr.ApplyRule(goalmodel);
+		
+		cr.ApplyRule(goalmodel);                                                          //Σιγουρα θελει βελτιωση 
+		
 		if(goalmodel.getcontributionlinks().size()>0) {
 			System.out.println("Contribution links are: ");
 			for(int i=0;i<goalmodel.getcontributionlinks().size();i++) {
@@ -302,9 +317,13 @@ public class Client {
 		long actualMemUsed=afterUsedMem-beforeUsedMem;
 		System.out.println("RAM is: " + actualMemUsed);
 		
+//		ResultPrinter resultPrinter = new ResultPrinter();
+//		
+//		resultPrinter.basicprint(ADG_Collections,goalmodel);
 		
 		
-		PrintWriter writer = new PrintWriter("C:\\Users\\ADMIN\\Desktop\\diplomatiki_output3.txt");
+		
+		PrintWriter writer = new PrintWriter("/home/mik/Desktop/diplomatiki_output3.txt");
 		List<DirectedGraph> zero = ADG_Collections.get("0").get_transformed_ADG_Collection();
 		//combine the various ADGs from different ADG Collections in order to extract the final sequences
 		
@@ -355,6 +374,7 @@ public class Client {
 			
 		}
 		writer.close();
+		
 		
 		
 		
@@ -719,14 +739,14 @@ public class Client {
 		if (g instanceof Action) {
 			Action a = (Action)g;
 			if(a.getParallelLinks().size()>0) {
-				System.out.print(offset+ "Action: " + a.getName() );
+				System.out.print(offset+ "Action: " + a.getName() +" with cost:" + a.getCost() );
 				System.out.println(" -> " + a.getParallelLinks().get(0).getTo().getName());
 				for (Resource r : a.getRequires()) {
 					System.out.println(offset+"\t"+"Resource: " + r.getName());
 				}
 			}
 			else {
-				System.out.println(offset+ "Action: " + a.getName() );
+				System.out.println(offset+ "Action: " + a.getName() +" with cost:" + a.getCost());
 				for (Resource r : a.getRequires()) {
 					System.out.println(offset+"\t"+"Resource: " + r.getName());
 				}

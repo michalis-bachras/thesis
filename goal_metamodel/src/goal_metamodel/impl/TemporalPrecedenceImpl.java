@@ -6,6 +6,8 @@ import goal_metamodel.GoalNode;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.TemporalPrecedence;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -27,7 +29,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TemporalPrecedenceImpl extends TemporalLinkImpl implements TemporalPrecedence {
+public class TemporalPrecedenceImpl extends TemporalLinkImpl implements TemporalPrecedence,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 12L;
+
 	/**
 	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->

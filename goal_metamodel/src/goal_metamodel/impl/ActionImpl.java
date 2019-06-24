@@ -6,6 +6,8 @@ import goal_metamodel.Action;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Resource;
 import goal_metamodel.Task;
+
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -40,8 +42,23 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ActionImpl extends GoalNodeImpl implements Action {
+public class ActionImpl extends GoalNodeImpl implements Action,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
+	
+	protected int cost;
+	
+	public int getCost() {
+		return cost;
+	}
+	
+	public void setCost(int cost) {
+		 this.cost = cost;
+	}
+
 	protected Task parent ; 
 	
 	public void set_parent(Task parent) {
@@ -77,7 +94,7 @@ public class ActionImpl extends GoalNodeImpl implements Action {
 		return negated;
 	}
 	
-	protected boolean isParallelAction = false;  //αφορά τα  P actions που έχω τοποθετήσει και μόνο για να ξέρω ότι πίσω από αυτά τα actions κρύβονται actions μέσα στην παραλληλία
+	protected boolean isParallelAction = false;  //οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½  P actions οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ actions οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ actions οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½
 	
 	public void setIsParallelAction() {
 		isParallelAction = true;

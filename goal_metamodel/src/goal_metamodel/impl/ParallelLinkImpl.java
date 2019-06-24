@@ -7,6 +7,8 @@ import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.ParallelLink;
 import goal_metamodel.ParallelNode;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ParallelLinkImpl extends DependencyLinkImpl implements ParallelLink {
+public class ParallelLinkImpl extends DependencyLinkImpl implements ParallelLink,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 14L;
+
 	/**
 	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->

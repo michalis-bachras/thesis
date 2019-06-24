@@ -36,6 +36,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import java.io.Serializable;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Goal Model</b></em>'.
@@ -53,8 +55,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Goal_ModelImpl extends MinimalEObjectImpl.Container implements Goal_Model {
+public class Goal_ModelImpl extends MinimalEObjectImpl.Container implements Goal_Model,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private HashMap<String,Task> tasks = new HashMap<String,Task>();
 	private HashMap<String,Action> actions = new HashMap<String,Action>(); 
 	private HashMap<String,Resource> resources = new HashMap<String,Resource>(); 

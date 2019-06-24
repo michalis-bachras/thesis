@@ -6,6 +6,8 @@ import goal_metamodel.Action;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.TimeoutLink;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,7 +30,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TimeoutLinkImpl extends TemporalPrecedenceImpl implements TimeoutLink {
+public class TimeoutLinkImpl extends TemporalPrecedenceImpl implements TimeoutLink,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 11L;
+
 	/**
 	 * The default value of the '{@link #getTimeoutPeriod() <em>Timeout Period</em>}' attribute.
 	 * <!-- begin-user-doc -->

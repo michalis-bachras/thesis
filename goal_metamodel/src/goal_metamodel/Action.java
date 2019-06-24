@@ -5,6 +5,7 @@ package goal_metamodel;
 import java.util.Date;
 import java.util.HashSet;
 
+
 import org.eclipse.emf.common.util.EList;
 
 
@@ -31,6 +32,10 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Action extends GoalNode {
+	
+	public int getCost();
+	
+	public void setCost(int cost);
 	
 	public void set_parent(Task parent);
 	

@@ -5,6 +5,8 @@ package goal_metamodel.impl;
 import goal_metamodel.Goal_metamodelPackage;
 import goal_metamodel.Node;
 
+import java.io.Serializable;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
@@ -24,7 +26,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class NodeImpl  extends ContextualComponentImpl implements Node {
+public class NodeImpl  extends ContextualComponentImpl implements Node,Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 13L;
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
